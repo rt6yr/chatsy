@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export const OPENAI_URL = "api.openai.com";
+// export const OPENAI_URL = "api.openai.com";
+ export const OPENAI_URL = "poko-five.vercel.app";
 const DEFAULT_PROTOCOL = "https";
 const PROTOCOL = process.env.PROTOCOL || DEFAULT_PROTOCOL;
 const BASE_URL = process.env.BASE_URL || OPENAI_URL;
