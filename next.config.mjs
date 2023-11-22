@@ -74,7 +74,7 @@ if (mode !== "export") {
       },
       {
         source: "/sharegpt",
-        destination: "https://poko-five.vercel.app/api/conversations",
+        destination: "https://sharegpt.com/api/conversations",
       },
     ];
 
