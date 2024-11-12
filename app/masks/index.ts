@@ -20,18 +20,23 @@ export const BUILTIN_MASK_STORE = {
 
 export const BUILTIN_MASKS: BuiltinMask[] = [];
 
-if (typeof window != "undefined") {
+if (typeof window !== "undefined") {
   // run in browser skip in next server
   fetch("/masks.json")
     .then((res) => res.json())
     .catch((error) => {
       console.error("[Fetch] failed to fetch masks", error);
-      return { en: [] }; // Only return 'en' as part of the fallback
+      return { en: [] }; // Fallback in case of error: only 'en' array
     })
     .then((masks) => {
-      const { en = [] } = masks; // Only process 'en' masks
-      return en.map((m) => {
-        BUILTIN_MASKS.push(BUILTIN_MASK_STORE.add(m));
-      });
+      const { en = [] } = masks; // Ensure there's always an 'en' array
+      if (Array.isArray(en)) {
+        // Ensure 'en' is an array before processing
+        en.forEach((m) => {
+          BUILTIN_MASKS.push(BUILTIN_MASK_STORE.add(m));
+        });
+      } else {
+        console.error("[Fetch] 'en' is not an array:", en);
+      }
     });
 }
