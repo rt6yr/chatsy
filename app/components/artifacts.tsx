@@ -15,6 +15,7 @@ import DownloadIcon from "../icons/download.svg";
 import GithubIcon from "../icons/github.svg";
 import LoadingButtonIcon from "../icons/loading.svg";
 import ReloadButtonIcon from "../icons/reload.svg";
+import KivtechsIcon from  "../icons/kivtechs.svg";
 import Locale from "../locales";
 import { Modal, showToast } from "./ui-lib";
 import { copyToClipboard, downloadAs } from "../utils";
@@ -230,7 +231,7 @@ export function Artifacts() {
     <div className={styles["artifacts"]}>
       <div className={styles["artifacts-header"]}>
         <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
-          <IconButton bordered icon={<GithubIcon />} shadow />
+          <IconButton bordered icon={<KivtechsIcon />} shadow />
         </a>
         <IconButton
           bordered
@@ -239,7 +240,7 @@ export function Artifacts() {
           shadow
           onClick={() => previewRef.current?.reload()}
         />
-        <div className={styles["artifacts-title"]}>NextChat Artifacts</div>
+        <div className={styles["artifacts-title"]}>Chatsy Artifacts</div>
         <ArtifactsShareButton
           id={id}
           getCode={() => code}

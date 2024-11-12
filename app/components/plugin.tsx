@@ -15,6 +15,7 @@ import DeleteIcon from "../icons/delete.svg";
 import ConfirmIcon from "../icons/confirm.svg";
 import ReloadIcon from "../icons/reload.svg";
 import GithubIcon from "../icons/github.svg";
+import KivtechsIcon from "../icons/kivtechs.svg";
 
 import { Plugin, usePluginStore, FunctionToolService } from "../store/plugin";
 import {
@@ -136,7 +137,7 @@ export function PluginPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <IconButton icon={<GithubIcon />} bordered />
+                <IconButton icon={<KivtechsIcon />} bordered />
               </a>
             </div>
             <div className="window-action-button">
@@ -188,7 +189,7 @@ export function PluginPage() {
                   rel="noopener noreferrer"
                   style={{ marginLeft: 16 }}
                 >
-                  <IconButton icon={<GithubIcon />} bordered />
+                  <IconButton icon={<KivtechsIcon />} bordered />
                 </a>
               </div>
             )}

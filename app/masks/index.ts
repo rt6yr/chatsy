@@ -1,4 +1,6 @@
+
 import { Mask } from "../store/mask";
+import { EN_MASKS } from "./en";
 
 import { type BuiltinMask } from "./typing";
 export { type BuiltinMask } from "./typing";
@@ -21,17 +23,17 @@ export const BUILTIN_MASK_STORE = {
 
 export const BUILTIN_MASKS: BuiltinMask[] = [];
 
-if (typeof window != "undefined") {
-  // run in browser skip in next server
+if (typeof window !== "undefined") {
+  // Run in browser, skip in server
   fetch("/masks.json")
     .then((res) => res.json())
     .catch((error) => {
       console.error("[Fetch] failed to fetch masks", error);
-      return { cn: [], tw: [], en: [] };
+      return { en: [] };
     })
     .then((masks) => {
-      const { cn = [], tw = [], en = [] } = masks;
-      return [...cn, ...tw, ...en].map((m) => {
+      const { en = [] } = masks;
+      return en.map((m) => {
         BUILTIN_MASKS.push(BUILTIN_MASK_STORE.add(m));
       });
     });

@@ -1,8 +1,8 @@
-export const OWNER = "ChatGPTNextWeb";
-export const REPO = "ChatGPT-Next-Web";
-export const REPO_URL = `https://github.com/${OWNER}/${REPO}`;
-export const PLUGINS_REPO_URL = `https://github.com/${OWNER}/NextChat-Awesome-Plugins`;
-export const ISSUE_URL = `https://github.com/${OWNER}/${REPO}/issues`;
+export const OWNER = "KIVTECHS";
+export const REPO = "ChatSY";
+export const REPO_URL = `https://www.kivtechs.cloud/${OWNER}/${REPO}`;
+export const PLUGINS_REPO_URL = `https://www.kivtechs.cloud/${OWNER}/chatsy-Plugins`;
+export const ISSUE_URL = `https://www.kivtechs.cloud/${OWNER}/${REPO}/issues`;
 export const UPDATE_URL = `${REPO_URL}#keep-updated`;
 export const RELEASE_URL = `${REPO_URL}/releases`;
 export const FETCH_COMMIT_URL = `https://api.github.com/repos/${OWNER}/${REPO}/commits?per_page=1`;
@@ -99,7 +99,7 @@ export const ACCESS_CODE_PREFIX = "nk-";
 export const LAST_INPUT_KEY = "last-input";
 export const UNFINISHED_INPUT = (id: string) => "unfinished-input-" + id;
 
-export const STORAGE_KEY = "chatgpt-next-web";
+export const STORAGE_KEY = "chatsy";
 
 export const REQUEST_TIMEOUT_MS = 60000;
 
@@ -554,12 +554,12 @@ export const internalAllowedWebDavEndpoints = [
   "https://app.koofr.net/dav/Koofr",
 ];
 
-export const DEFAULT_GA_ID = "G-89WN60ZK2E";
+export const DEFAULT_GA_ID = "jjcjj";
 export const PLUGINS = [
   { name: "Plugins", path: Path.Plugins },
   { name: "Stable Diffusion", path: Path.Sd },
   { name: "Search Chat", path: Path.SearchChat },
 ];
 
-export const SAAS_CHAT_URL = "https://nextchat.dev/chat";
-export const SAAS_CHAT_UTM_URL = "https://nextchat.dev/chat?utm=github";
+export const SAAS_CHAT_URL = "https://poko.kivtechs.cloud/chat";
+export const SAAS_CHAT_UTM_URL = "https://poko.kivtechs.cloud/chat?utm=github";

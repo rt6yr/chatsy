@@ -4,7 +4,7 @@ import SDIcon from "@/app/icons/sd.svg";
 import ReturnIcon from "@/app/icons/return.svg";
 import HistoryIcon from "@/app/icons/history.svg";
 import Locale from "@/app/locales";
-
+import KivtechsIcon from "@/app/icons/kivtechs.svg";
 import { Path, REPO_URL } from "@/app/constant";
 
 import { useNavigate } from "react-router-dom";
@@ -123,7 +123,7 @@ export function SideBar(props: { className?: string }) {
       <SideBarTail
         primaryAction={
           <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
-            <IconButton icon={<GithubIcon />} shadow />
+            <IconButton icon={<KivtechsIcon />} shadow />
           </a>
         }
         secondaryAction={
