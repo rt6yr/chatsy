@@ -57,7 +57,8 @@ export function AuthPage() {
         ></IconButton>
       </div>
       <div className={clsx("no-dark", styles["auth-logo"])}>
-        <BotIcon />
+       <BotIcon width={24} height={24} />
+
       </div>
 
       <div className={styles["auth-title"]}>{Locale.Auth.Title}</div>

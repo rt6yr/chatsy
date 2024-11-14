@@ -33,11 +33,16 @@ import clsx from "clsx";
 export function Loading(props: { noLogo?: boolean }) {
   return (
     <div className={clsx("no-dark", styles["loading-content"])}>
-      {!props.noLogo && <BotIcon />}
+      {!props.noLogo && (
+        <div style={{ width: 24, height: 24 }}>
+          <BotIcon />
+        </div>
+      )}
       <LoadingIcon />
     </div>
   );
 }
+
 
 const Artifacts = dynamic(async () => (await import("./artifacts")).Artifacts, {
   loading: () => <Loading noLogo />,
