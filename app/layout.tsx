@@ -12,7 +12,7 @@ const serverConfig = getServerSideConfig();
 
 export const metadata: Metadata = {
   title: "CHATSY",
-  description: " Ai chatbot Agent by Kivtechs",
+  description: " Kivtechs Multi AI ",
   appleWebApp: {
     title: "CHATSY",
     statusBarStyle: "default",
